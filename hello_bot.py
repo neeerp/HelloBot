@@ -1,6 +1,7 @@
 import praw
 import re
 import os
+import sys
 
 
 class HelloBot:
@@ -86,5 +87,11 @@ class HelloBot:
 
 
 if __name__ == "__main__":
+    if len(sys.argv) == 2:
+        subreddit = sys.argv[1]
+    else:
+        print("Invalid arguments given; defaulting to subreddit r/neeerp")
+        subreddit = 'neeerp'
+
     hello_bot = HelloBot()
-    hello_bot.say_hello('neeerp')
+    hello_bot.say_hello(subreddit)
