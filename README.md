@@ -4,16 +4,15 @@ A simple reddit bot written in python that scans the 5 hottest posts in a given 
 ## Instructions
 
 ### Dependencies
-This bot uses PRAW 5.2.1. Install it by typing
+This bot uses PRAW 5.2.1. Install it by typing the following into your terminal
 ```
-pip install praw
+$ pip install praw
 ```
-in your terminal
 
 ### Setting up a reddit account
-In order to run Hello Bot, one must set up a reddit app. Create a new reddit account ( Or use an existing one if you please ), and browse to https://www.reddit.com/prefs/apps/. Scroll down and hit 'Create another app...'. Give it a name, select 'script', type in http://127.0.0.1 for the redirect uri, and hit create.
+In order to run Hello Bot, one must set up a reddit app. Create a new reddit account ( Or use an existing one if you please ), and browse to https://www.reddit.com/prefs/apps/. Scroll down and hit 'Create another app...'. Give it a name, select 'script', type in http:<i></i>//127.0.0.1 for the redirect uri, and hit create.
 
-Now, you also need to set up a praw.ini file (either in the same directory as hello_bot.py, or in the config directory which is dependent on your operating system; see http://praw.readthedocs.io/en/latest/getting_started/configuration/prawini.html) to run Hello Bot. To the bottom of your config file, append the following:
+Now, you also need to set up a praw.ini file (either in the same directory as hello_bot.py, or in the config directory which is dependent on your operating system; see the [PRAW documentation](http://praw.readthedocs.io/en/latest/getting_started/configuration/prawini.html)) to run Hello Bot. To the bottom of your praw.ini file, append the following:
 
 ```
 [hello_bot]
