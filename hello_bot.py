@@ -19,7 +19,7 @@ class HelloBot:
 
         # Initialize or load a list containing the posts Hellobot should ignore
         if not os.path.isfile('posts_replied_to.txt'):
-            self.posts_replied_to = []
+            self._posts_replied_to = []
         else:
             with open('posts_replied_to.txt', 'r') as f:
                 post_string = f.read()
@@ -42,6 +42,7 @@ class HelloBot:
             :param post: The post that hellobot will parse and maybe reply to
             :type post: praw.Submission || praw.Comment
         """
+
         if isinstance(post, praw.models.Submission):
             post_text = post.selftext
         else:
